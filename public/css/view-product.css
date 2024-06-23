@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bree+Serif&family=EB+Garamond:ital,wght@0,500;1,800&display=swap');
+
+body {
+  background: #DFC2F2;
+  background-image: linear-gradient(to right, #259bb2, #ffe6e6);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#container {
+  box-shadow: 0 15px 30px 1px grey;
+  background: rgba(255, 255, 255, 0.90);
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 5em auto;
+  padding: 20px;
+}
+
+.product-details {
+  text-align: left;
+  padding: 30px;
+}
+
+.product-details h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px;
+  color: #344055;
+}
+
+.product-details h1:before {
+  content: '';
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  animation: chan-sh 6s ease infinite;
+}
+
+.btn-product {
+  background: #809fff;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  color: #eee;
+  padding: 10px 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-product:hover {
+  background: #1a66ff;
+  transform: translateY(-5px);
+}
+
+.btn-product .price, .btn-product .shopping-cart {
+  background: #333;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+.btn-product .price {
+  margin-right: 10px;
+}
+
+.btn-product .shopping-cart {
+  margin-left: 10px;
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+#container img {
+  width: 100%;
+  height: auto;
+}
+
+.info {
+  background: rgba(27, 26, 26, 0.9);
+  font-family: 'Bree Serif', serif;
+  position: absolute;
+  color: #FFF;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+.info h2 {
+  text-align: center;
+}
+
+.product-image:hover .info {
+  transform: translateX(0);
+}
+
+.product-image:hover img {
+  transform: scale(1.2, 1.2);
+  transition: transform 0.3s ease-out;
+}
+
+.view-product {
+  margin: auto;
+  width: 100%;
+  max-width: 1000px; /* Add a max-width to keep it from stretching too wide */
+  padding: 20px;
+}
+
+a {
+  color: #8b909a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none !important;
+}
+
+a:focus {
+  text-decoration: none !important;
+}
+
+@media (max-width: 767.98px) {
+  .product-details, .product-image {
+    width: 100%;
+    padding: 15px;
+  }
+  .btn-product {
+    width: 100%;
+    justify-content: center;
+  }
+  .btn-product .price, .btn-product .shopping-cart {
+    margin: 0;
+    padding: 10px 15px;
+  }
+}
